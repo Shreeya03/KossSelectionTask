@@ -10,7 +10,7 @@ def read(a,session):
 async def main():
     start = time.time()
     async with aiohttp.ClientSession() as session:
-        for i in range(1,3):
+        for i in range(1,4):
             response=await read(i,session)
             results.append(await response.json())
             print(i, "done")
