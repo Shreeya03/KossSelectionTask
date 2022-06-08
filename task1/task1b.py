@@ -4,7 +4,7 @@ import asyncio
 import aiohttp
 def gettasks(session):
     tasks=[]
-    for i in range(1,3):
+    for i in range(1,4):
         tasks.append(session.get(f"https://reqres.in/api/users?page{i}"))
         print(i, "done")
     return tasks
